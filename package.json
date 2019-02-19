@@ -1,0 +1,17 @@
+{
+	"name": "mars-three.js",
+	"version": "1.0.0",
+	"description": "",
+	"main": "",
+	"scripts": {
+		"start": "concurrently \"browser-sync start --config ./bs-config.js\" \"node-sass -w src/scss/ -o src/css/\""
+	},
+	"author": "G7495x",
+	"license": "ISC",
+	"dependencies": {},
+	"devDependencies": {
+		"browser-sync": "^2.26.3",
+		"concurrently": "^4.1.0",
+		"node-sass": "^4.10.0"
+	}
+}

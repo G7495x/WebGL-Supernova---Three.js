@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:400,700">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>WebGL Supernova</title>
+</head>
+<body>
+	<div id="content">
+		<canvas id="renderer"></canvas>
+		<div id="frame"></div>
+		<div id="title" onclick="isInFullscreen?closeFullscreen():openFullscreen()">
+			<div>
+				<img src="imgs/logo.png">
+				<h3><b>WebGL</b> Supernova</h3>
+			</div>
+		</div>
+		<div id="guide">
+			<div>
+				<span>A spectacular supernova rendered in Three.js.</span>
+				<span>A spectacular supernova rendered in Three.js.</span>
+			</div>
+		</div>
+		<div id="variants">
+			<div>Colors</div>
+			<img src="imgs/blue.png" onclick="uniforms.uColor.value=colors['blue']">
+			<img src="imgs/logo.png" onclick="uniforms.uColor.value=colors['green']">
+			<img src="imgs/orange.png" onclick="uniforms.uColor.value=colors['orange']">
+			<img src="imgs/red.png" onclick="uniforms.uColor.value=colors['red']">
+			<img src="imgs/violet.png" onclick="uniforms.uColor.value=colors['violet']">
+			<img src="imgs/yellow.png" onclick="uniforms.uColor.value=colors['yellow']">
+		</div>
+	</div>
+
+	<script src="js/libs/three.min.js" charset="utf-8"></script>
+	<script src="js/libs/GPUComputationRenderer.js" charset="utf-8"></script>
+	<script src="js/libs/OBJLoader.js" charset="utf-8"></script>
+	<script src="js/libs/OrbitControls.js" charset="utf-8"></script>
+	<script src="js/libs/stats.min.js" charset="utf-8"></script>
+	<script src="js/libs/dat.gui.min.js" charset="utf-8"></script>
+
+	<script id="gpuComputeOffset" src="shaders/gpuComputeOffset.glsl" type="x-shader/x-fragment" charset="utf-8"></script>
+	<script id="gpuComputeDirection" src="shaders/gpuComputeDirection.glsl" type="x-shader/x-fragment" charset="utf-8"></script>
+
+	<script id="vertexShader" src="shaders/vertexShader.glsl" type="x-shader/x-vertex" charset="utf-8"></script>
+	<script id="fragmentShader" src="shaders/fragmentShader.glsl" type="x-shader/x-fragment" charset="utf-8"></script>
+
+	<script src="https://g7495x.github.io/WebGL-G7495x-Signature---Three.js/src/g7495x.js" charset="utf-8"></script>
+	<script charset="utf-8">g7495x('Demo by')</script>
+
+	<script src="js/common.js" charset="utf-8"></script>
+	<script src="js/init.js" charset="utf-8"></script>
+	<script src="js/graphics.js" charset="utf-8"></script>
+	<script src="js/main.js" charset="utf-8"></script>
+</body>
+</html>

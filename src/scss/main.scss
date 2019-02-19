@@ -1,0 +1,144 @@
+$bg-color: hsl(220,10%,5%);
+
+@mixin extend($size: 0){
+	top: $size;
+	right: $size;
+	bottom: $size;
+	left: $size;
+}
+
+*,
+*::before,
+*::after{
+	font-family: 'Bai Jamjuree',sans-serif;
+	box-sizing: border-box;
+	flex-shrink: 0;
+}
+html,body{ overflow: hidden; }
+body{
+	@include extend;
+	position: fixed;
+	margin: 0;
+	background-color: $bg-color;
+	color: white;
+	font-size: 12px;
+	user-select: none;
+}
+#content{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	background: $bg-color url(../imgs/bg1.png) center bottom no-repeat;
+	background-size: contain;
+}
+#renderer{
+	@include extend;
+	position: absolute;
+	/* width: 100% !important; */
+	/* height: 100% !important; */
+	margin: auto;
+}
+#title{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px;
+	&.side h3{
+		transform-origin: -40px 50%;
+    transform: rotate(90deg);
+    transition: transform 1s;
+	}
+	>div{
+		display: flex;
+		align-items: center;
+	}
+	img{
+		margin: -15px 0px;
+		margin-left: -5px;
+		height: 60px;
+	}
+	h3{
+		position: relative;
+		margin-left: 10px;
+		color: rgba(white,.875);
+		font-size: 16px;
+		font-weight: 400;
+		@media (max-width: 767.98px){ font-size: 14px; }
+		// &::before{
+		// 	@include extend;
+		// 	content: '';
+		// 	display: block;
+		// 	position: absolute;
+		// 	background-image: linear-gradient(to top,rgba($bg-color,.375),transparent 62.5%);
+		// }
+	}
+}
+#guide{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 10px;
+	>img{
+		margin-top: -10px;
+		width: auto;
+		height: 35px;
+	}
+	div{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		width: 0px;
+		height: 15px;
+		margin-left: 5px;
+	}
+	span{
+		position: absolute;
+		color: rgba(white,.75);
+		mix-blend-mode: overlay;
+		white-space: nowrap;
+	}
+}
+#frame{
+	display: flex;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	@media (orientation: portrait){ height: 100vw; }
+	@media (orientation: landscape){ width: 100vh; }
+}
+#variants{
+	$size: 40px;
+	position: absolute;
+	bottom: 30px;
+	right: 2.5px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 210px;
+	mix-blend-mode: screen;
+	>div{
+		width: 100%;
+		padding-right: 10px;
+		color: gray;
+		font-size: 8px;
+		text-align: right;
+	}
+	>img{
+		width: $size;
+		height: $size;
+		margin: 0 -2.5px;
+		cursor: pointer;
+	}
+}
+body{
+	width: 800px;
+	height: 600px;
+	margin-top: auto;
+	background-color: white;
+}
