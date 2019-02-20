@@ -40,8 +40,8 @@ fadeHardness   ||(fadeHardness   =batchCount*.625)
 particleOpacity||(particleOpacity=.5)
 particleSize   ||(particleSize   =.0325)
 particleSpeed  ||(particleSpeed  =.75)
-reactiveness   ||(reactiveness   =0)
-sphereRadius   ||(sphereRadius   =.375)
+reactiveness   ||(reactiveness   =1)
+sphereRadius   ||(sphereRadius   =Math.max(1/3,Math.random())) // Default: .375
 
 // Initializing Constants
 const rendererEle        =document.getElementById('renderer')

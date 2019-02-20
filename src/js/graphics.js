@@ -51,7 +51,7 @@ const uniforms={
 	uSphere          :{ value: sphereTexture       },
 	uSphereRadius    :{ value: sphereRadius        },
 	uTexBatchHeight  :{ value: gpgpuTexBatchHeight },
-	uTime            :{ value: 0                   },
+	uTime            :{ value: Math.random()       },
 }
 
 // GPGPU - Perform Calculations in GPU & output as texture
