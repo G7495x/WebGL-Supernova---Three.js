@@ -28,6 +28,10 @@ gpgpuTexWidth   ||(gpgpuTexWidth   =2048)
 spherePointCount||(spherePointCount=2048*8)
 batchCount      ||(batchCount      =7) // Particle are emitted in 'batches'
 
+curliness      ||(curliness      =1.375)
+particleSpeed  ||(particleSpeed  =.75)
+reactiveness   ||(reactiveness   =100)
+
 // NOTE:
 // - gpgpuTexWidth must be a power of 2 (for performance)
 // - spherePointCount must be a multiple of gpgpuTexWidth
@@ -35,13 +39,11 @@ batchCount      ||(batchCount      =7) // Particle are emitted in 'batches'
 
 // Run time parameters
 color          ||(color          ='red')
-curliness      ||(curliness      =1.375)
-fadeHardness   ||(fadeHardness   =batchCount*.625)
-particleOpacity||(particleOpacity=.5)
-particleSize   ||(particleSize   =.0325)
-particleSpeed  ||(particleSpeed  =.75)
-reactiveness   ||(reactiveness   =1)
-sphereRadius   ||(sphereRadius   =Math.max(1/3,Math.random())) // Default: .375
+fadeHardness   ||(fadeHardness   =batchCount*.25)
+particleOpacity||(particleOpacity=.625)
+particleSize   ||(particleSize   =.025)
+// sphereRadius   ||(sphereRadius   =.375)
+sphereRadius   ||(sphereRadius   =Math.max(1/3,Math.random()))
 
 // Initializing Constants
 const rendererEle        =document.getElementById('renderer')
