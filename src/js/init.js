@@ -30,7 +30,7 @@ batchCount      ||(batchCount      =7) // Particle are emitted in 'batches'
 
 curliness      ||(curliness      =1.375)
 particleSpeed  ||(particleSpeed  =.75)
-reactiveness   ||(reactiveness   =10) // Controls the amount of variation
+reactiveness   ||(reactiveness   =1) // Controls the amount of variation
 
 // NOTE:
 // - gpgpuTexWidth must be a power of 2 (for performance)
