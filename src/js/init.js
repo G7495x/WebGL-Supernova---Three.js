@@ -30,7 +30,7 @@ batchCount      ||(batchCount      =7) // Particle are emitted in 'batches'
 
 curliness      ||(curliness      =1.375)
 particleSpeed  ||(particleSpeed  =.75)
-reactiveness   ||(reactiveness   =100)
+reactiveness   ||(reactiveness   =10) // Controls the amount of variation
 
 // NOTE:
 // - gpgpuTexWidth must be a power of 2 (for performance)
@@ -39,11 +39,11 @@ reactiveness   ||(reactiveness   =100)
 
 // Run time parameters
 color          ||(color          ='red')
-fadeHardness   ||(fadeHardness   =batchCount*.25)
+fadeHardness   ||(fadeHardness   =batchCount*.625)
 particleOpacity||(particleOpacity=.625)
 particleSize   ||(particleSize   =.025)
 // sphereRadius   ||(sphereRadius   =.375)
-sphereRadius   ||(sphereRadius   =Math.max(1/3,Math.random()))
+sphereRadius   ||(sphereRadius   =clamp(Math.random(),1/3,2/3))
 
 // Initializing Constants
 const rendererEle        =document.getElementById('renderer')
