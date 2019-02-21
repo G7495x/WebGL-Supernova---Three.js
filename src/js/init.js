@@ -39,11 +39,11 @@ reactiveness   ||(reactiveness   =10) // Controls the amount of variation
 
 // Run time parameters
 color          ||(color          ='red')
-fadeHardness   ||(fadeHardness   =batchCount*.625)
+fadeHardness   ||(fadeHardness   =batchCount*4/7)
 particleOpacity||(particleOpacity=.625)
 particleSize   ||(particleSize   =.025)
 // sphereRadius   ||(sphereRadius   =.375)
-sphereRadius   ||(sphereRadius   =clamp(Math.random(),1/3,2/3))
+sphereRadius   ||(sphereRadius   =clamp(Math.random(),1/3,1/2))
 
 // Initializing Constants
 const rendererEle        =document.getElementById('renderer')
